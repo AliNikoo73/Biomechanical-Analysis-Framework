@@ -1,6 +1,60 @@
 # Biomechanics Analysis Framework
 
-A comprehensive framework for biomechanical analysis using OpenSim and Moco, providing tools for muscle-driven simulations, trajectory optimization, and movement analysis.
+A comprehensive framework for biomechanical analysis using OpenSim and Moco, with specialized modules for assistive device design and optimization.
+
+## Features
+
+- Inverse Kinematics and Dynamics Analysis
+- Muscle Force Optimization
+- Joint Angle Visualization and Analysis
+- Motion Animation and Recording
+- Assistive Device Design and Optimization
+  - Exoskeleton Parameter Optimization
+  - Prosthetic Device Design Tools
+  - Assistive Force Prediction
+- Data Processing Utilities
+  - Gait Cycle Normalization
+  - Event Detection
+  - Signal Processing
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Project Structure
+
+```
+biomech-analysis-framework/
+├── src/
+│   ├── kinematics/
+│   ├── dynamics/
+│   ├── optimization/
+│   ├── visualization/
+│   ├── assistive_devices/
+│   └── utils/
+├── examples/
+│   ├── tracking/
+│   ├── gait_analysis/
+│   ├── muscle_optimization/
+│   └── assistive_devices/
+├── docs/
+├── tests/
+└── data/
+```
+
+## Usage
+
+See the `examples/` directory for detailed usage examples and tutorials.
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🚀 Features
 
