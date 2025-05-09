@@ -49,7 +49,7 @@ Our framework produces detailed biomechanical analyses, including:
 
 ### Joint Angle Analysis
 
-<img src="./simulation_results/joint_angles.png" alt="Joint Angles" width="700">
+<img src="./simulation_results/joint_angles.png" alt="Joint Angles" width="800"/>
 
 **Description:** This plot shows the joint angles (in degrees) for the hip, knee, and ankle throughout a complete gait cycle (0-100%). Key features include:
 - **Hip Flexion/Extension (red):** Shows hip joint movement, with positive values indicating flexion and negative values indicating extension
@@ -59,7 +59,7 @@ Our framework produces detailed biomechanical analyses, including:
 
 ### Ground Reaction Forces
 
-<img src="./simulation_results/ground_reaction_forces.png" alt="Ground Reaction Forces" width="700">
+<img src="./simulation_results/ground_reaction_forces.png" alt="Ground Reaction Forces" width="800"/>
 
 **Description:** This plot displays the ground reaction forces (as % of body weight) throughout the gait cycle:
 - **Vertical GRF (red):** Shows the characteristic double-peak pattern of vertical force during stance phase, with the first peak representing weight acceptance and the second peak representing push-off
@@ -69,7 +69,7 @@ Our framework produces detailed biomechanical analyses, including:
 
 ### Muscle Activation Patterns
 
-<img src="./simulation_results/emg_activity.png" alt="EMG Activity" width="700">
+<img src="./simulation_results/emg_activity.png" alt="EMG Activity" width="800"/>
 
 **Description:** This plot shows the electromyography (EMG) activity patterns of key lower limb muscles during the gait cycle:
 - **Gastrocnemius:** Primarily active during mid to late stance phase, with peak activity during push-off
@@ -79,7 +79,7 @@ Our framework produces detailed biomechanical analyses, including:
 
 ### Comprehensive Gait Analysis
 
-<img src="./simulation_results/combined_gait_analysis.png" alt="Combined Gait Analysis" width="700">
+<img src="./simulation_results/combined_gait_analysis.png" alt="Combined Gait Analysis" width="800"/>
 
 **Description:** This comprehensive visualization integrates all key biomechanical parameters to provide a complete view of the gait cycle:
 - **Top panel:** Joint angles showing coordinated movement patterns of hip, knee, and ankle
@@ -110,7 +110,7 @@ biomech-analysis-framework/
 │       ├── exoskeleton_optimization.py  # Exoskeleton optimization example
 ├── docs/                       # Documentation
 ├── tests/                      # Unit and integration tests
-├── simulation_results/         # Generated simulation visualizations
+├── simulation_results/         # Generated simulation plot images
 └── data/                       # Sample data and models
     ├── models/                 # OpenSim models
     └── raw/                    # Raw experimental data
@@ -142,6 +142,11 @@ pip install -r requirements.txt
 
 3. Install OpenSim and Moco following the [official installation guide](https://opensim.stanford.edu/install/).
 
+4. Generate simulation result images:
+```bash
+python generate_plots.py
+```
+
 ## 💻 Usage
 
 ### Basic Simulation
@@ -167,8 +172,6 @@ To generate visualization plots of gait analysis:
 ```bash
 python generate_plots.py
 ```
-
-This will create the simulation plots in the `simulation_results` directory, which can be viewed with any image viewer.
 
 ## 🌟 Key Innovations
 
