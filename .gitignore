@@ -45,11 +45,14 @@ env/
 
 # Generated files
 *.csv
-*.png
 *.pdf
 *.html
 *.avi
 *.mp4
+
+# Allow documentation images but ignore other PNGs
+*.png
+!docs/images/*.png
 
 # Jupyter Notebook
 .ipynb_checkpoints
