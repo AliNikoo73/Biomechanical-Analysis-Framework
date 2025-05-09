@@ -1,4 +1,4 @@
-# Biomechanics Analysis Framework
+# Biomechanical Analysis Framework
 
 A comprehensive framework for biomechanical analysis using OpenSim and Moco, with specialized modules for assistive device design and optimization. This framework enables researchers and clinicians to perform sophisticated biomechanical simulations, analyze human movement, and design optimized assistive devices.
 
@@ -131,8 +131,8 @@ biomech-analysis-framework/
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/biomech-analysis-framework.git
-cd biomech-analysis-framework
+git clone https://github.com/yourusername/Biomechanical-Analysis-Framework.git
+cd Biomechanical-Analysis-Framework
 ```
 
 2. Install dependencies:
@@ -211,4 +211,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For questions and support, please [open an issue](https://github.com/yourusername/biomech-analysis-framework/issues) or contact the maintainers. 
+For questions and support, please [open an issue](https://github.com/yourusername/Biomechanical-Analysis-Framework/issues) or contact the maintainers. 
