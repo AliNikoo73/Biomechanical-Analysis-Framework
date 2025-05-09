@@ -131,7 +131,7 @@ biomech-analysis-framework/
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/Biomechanical-Analysis-Framework.git
+git clone https://github.com/AliNikoo73/Biomechanical-Analysis-Framework.git
 cd Biomechanical-Analysis-Framework
 ```
 
@@ -211,4 +211,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For questions and support, please [open an issue](https://github.com/yourusername/Biomechanical-Analysis-Framework/issues) or contact the maintainers. 
+For questions and support, please [open an issue](https://github.com/AliNikoo73/Biomechanical-Analysis-Framework/issues) or contact the maintainers. 
