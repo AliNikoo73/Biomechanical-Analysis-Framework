@@ -20,7 +20,7 @@ The Biomechanical Analysis Framework (BAF) provides a modular, extensible platfo
 
 ### Gait Kinematics
 
-![Joint Angles](output/joint_angles.png)
+<img src="./output/joint_angles.png" alt="Joint Angles" width="700"/>
 
 The joint angle analysis reveals characteristic patterns throughout the gait cycle:
 - **Hip**: Exhibits ~40° of total excursion, with peak flexion occurring at initial contact and terminal swing, and peak extension at terminal stance
@@ -29,7 +29,7 @@ The joint angle analysis reveals characteristic patterns throughout the gait cyc
 
 ### Ground Reaction Forces
 
-![Ground Reaction Forces](output/ground_reaction_forces.png)
+<img src="./output/ground_reaction_forces.png" alt="Ground Reaction Forces" width="700"/>
 
 Ground reaction force analysis demonstrates:
 - **Vertical GRF**: Classic double-peak pattern with first peak (~110% BW) representing weight acceptance and second peak (~110% BW) representing push-off, with mid-stance valley (~80% BW)
@@ -38,7 +38,7 @@ Ground reaction force analysis demonstrates:
 
 ### Muscle Activation Patterns
 
-![EMG Activity](output/emg_activity.png)
+<img src="./output/emg_activity.png" alt="EMG Activity" width="700"/>
 
 Electromyography analysis reveals coordinated muscle activation patterns:
 - **Gastrocnemius**: Primary activation during mid-to-late stance (30-60% gait cycle) with peak activity at terminal stance for push-off
@@ -48,14 +48,21 @@ Electromyography analysis reveals coordinated muscle activation patterns:
 
 ### Joint Dynamics
 
-![Joint Moments](output/joint_moments.png)
+<img src="./output/kinematics_grf.png" alt="Kinematics and GRF" width="700"/>
+
+The combined kinematics and ground reaction forces visualization shows the relationship between joint motion and external forces:
+- **Top panel**: Joint angles throughout the gait cycle, highlighting the coordination between hip, knee, and ankle movements
+- **Bottom panel**: Corresponding ground reaction forces, showing how external forces relate to joint kinematics
+- The vertical dashed line marks toe-off at approximately 60% of the gait cycle, separating stance and swing phases
+
+<img src="./output/joint_moments.png" alt="Joint Moments" width="700"/>
 
 Joint moment analysis shows:
 - **Ankle**: Progressive increase in plantarflexor moment during stance, peaking at ~1.5 Nm/kg at terminal stance (50% gait cycle)
 - **Knee**: Initial extensor moment (~0.5 Nm/kg) during loading response, transitioning to flexor moment during mid-stance, with second extensor peak during terminal stance
 - **Hip**: Extensor moment (~1.0 Nm/kg) during early stance for stability, transitioning to flexor moment during pre-swing and early swing
 
-![Joint Powers](output/joint_powers.png)
+<img src="./output/joint_powers.png" alt="Joint Powers" width="700"/>
 
 Joint power analysis reveals energy flow patterns:
 - **Ankle**: Power absorption (A1, negative power) during mid-stance as the tibia rotates over the foot, followed by substantial power generation (A2, positive power, ~3.5 W/kg) during push-off
@@ -76,7 +83,7 @@ Joint work analysis quantifies energy generation and absorption:
 
 ### Integrated Biomechanical Analysis
 
-![Combined Gait Analysis](output/combined_gait_analysis.png)
+<img src="./output/combined_gait_analysis.png" alt="Combined Gait Analysis" width="700"/>
 
 The integrated analysis demonstrates the temporal coordination between:
 - Joint kinematics (top panel)
