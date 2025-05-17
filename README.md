@@ -1,214 +1,143 @@
-# Biomechanical Analysis Framework
+# Biomechanical Analysis Framework (BAF)
 
-A comprehensive framework for biomechanical analysis using OpenSim and Moco, with specialized modules for assistive device design and optimization. This framework enables researchers and clinicians to perform sophisticated biomechanical simulations, analyze human movement, and design optimized assistive devices.
+A comprehensive Python framework for biomechanical data analysis, visualization, and assistive device optimization.
 
-## 🔍 Overview
+## Overview
 
-The Biomechanics Analysis Framework provides a modular, extensible platform for:
-- Analyzing human movement through inverse kinematics and dynamics
-- Optimizing muscle forces and control strategies
-- Designing and evaluating assistive devices such as exoskeletons and prosthetics
-- Visualizing and processing biomechanical data
-- Implementing advanced optimization algorithms for rehabilitation
+The Biomechanical Analysis Framework (BAF) provides a modular, extensible platform for analyzing human movement data, visualizing biomechanical parameters, and optimizing assistive devices. It integrates with OpenSim for musculoskeletal modeling and simulation.
 
-The framework builds on OpenSim's powerful biomechanical modeling capabilities and extends them with specialized modules for assistive device optimization, advanced visualization, and machine learning integration.
+## Features
 
-## ✨ Features
+- **Data Processing**: Tools for processing, filtering, and normalizing biomechanical data
+- **Kinematics Analysis**: Joint angle calculation and segment trajectory analysis
+- **Dynamics Analysis**: Inverse dynamics for calculating joint moments, powers, and work
+- **Visualization**: Comprehensive plotting tools for joint angles, GRF, EMG, and combined analyses
+- **Assistive Device Modeling**: Framework for modeling and optimizing exoskeletons, prosthetics, and orthoses
+- **OpenSim Integration**: Seamless integration with OpenSim for musculoskeletal modeling and simulation
+- **GUI Application**: User-friendly interface for common biomechanical analysis tasks
 
-- **Biomechanical Analysis**
-  - Inverse Kinematics and Dynamics Analysis
-  - Muscle Force Optimization
-  - Forward Dynamics Simulation
-  - Joint Torque and Power Analysis
-  - Gait Analysis and Evaluation
+## Installation
 
-- **Assistive Device Design and Optimization**
-  - Exoskeleton Parameter Optimization
-  - Prosthetic Device Design Tools
-  - Assistive Force Prediction
-  - Patient-Specific Customization
-  - Novel Optimization Algorithms (including ADOHRL)
+### Prerequisites
 
-- **Visualization and Analysis**
-  - Joint Angle Visualization
-  - Ground Reaction Force Analysis
-  - EMG Signal Processing and Visualization
-  - Motion Animation and Recording
-  - Comparative Analysis Tools
+- Python 3.7+
+- OpenSim 4.5.2+
 
-- **Data Processing Utilities**
-  - Gait Cycle Normalization
-  - Event Detection
-  - Signal Processing
-  - Data Import/Export
-  - Statistical Analysis
+### Installing OpenSim
 
-## 📊 Simulation Results
-
-Our framework produces detailed biomechanical analyses, including:
-
-### Joint Angle Analysis
-
-![Joint Angles](docs/images/joint_angles.png)
-
-**Description:** This plot shows the joint angles (in degrees) for the hip, knee, and ankle throughout a complete gait cycle (0-100%). Key features include:
-- **Hip Flexion/Extension (red):** Shows hip joint movement, with positive values indicating flexion and negative values indicating extension
-- **Knee Flexion/Extension (green):** Shows the characteristic knee flexion pattern during stance and swing phases
-- **Ankle Dorsi/Plantarflexion (blue):** Shows ankle movement, with upward deflection indicating dorsiflexion and downward indicating plantarflexion
-- **Vertical dashed line:** Marks the transition from stance to swing phase (toe-off) at approximately 60% of the gait cycle
-
-### Ground Reaction Forces
-
-![Ground Reaction Forces](docs/images/ground_reaction_forces.png)
-
-**Description:** This plot displays the ground reaction forces (as % of body weight) throughout the gait cycle:
-- **Vertical GRF (red):** Shows the characteristic double-peak pattern of vertical force during stance phase, with the first peak representing weight acceptance and the second peak representing push-off
-- **Anterior-Posterior GRF (green):** Shows braking forces (negative values) in early stance and propulsive forces (positive values) in late stance
-- **Medial-Lateral GRF (blue):** Shows the smaller medial-lateral forces during walking
-- **Forces reduce to zero** during swing phase (after 60%) when the foot is no longer in contact with the ground
-
-### Muscle Activation Patterns
-
-![EMG Activity](docs/images/emg_activity.png)
-
-**Description:** This plot shows the electromyography (EMG) activity patterns of key lower limb muscles during the gait cycle:
-- **Gastrocnemius:** Primarily active during mid to late stance phase, with peak activity during push-off
-- **Tibialis Anterior:** Shows two main activity periods - during initial contact to control foot placement and during swing phase for ankle dorsiflexion
-- **Quadriceps:** Most active during early stance phase for weight acceptance and knee stability
-- **Hamstrings:** Active during late swing and early stance phases to decelerate the limb and control knee extension
-
-### Comprehensive Gait Analysis
-
-![Combined Gait Analysis](docs/images/combined_gait_analysis.png)
-
-**Description:** This comprehensive visualization integrates all key biomechanical parameters to provide a complete view of the gait cycle:
-- **Top panel:** Joint angles showing coordinated movement patterns of hip, knee, and ankle
-- **Middle panel:** Ground reaction forces showing the interaction between the foot and ground
-- **Bottom panels:** Muscle activation patterns divided into lower leg muscles (left) and upper leg muscles (right)
-
-This integrated view allows researchers to examine the relationships between joint kinematics, kinetics, and muscle activity throughout the gait cycle.
-
-## 🧩 Project Structure
-
-```
-biomech-analysis-framework/
-├── src/                        # Source code for the framework
-│   ├── kinematics/             # Joint and segment kinematics analysis
-│   ├── dynamics/               # Force and torque calculations
-│   ├── optimization/           # Optimization algorithms
-│   │   └── adaptive_dual_objective_rl.py  # ADOHRL algorithm
-│   ├── visualization/          # Data visualization tools
-│   ├── assistive_devices/      # Assistive device models
-│   │   ├── exoskeleton/        # Exoskeleton models and controllers
-│   │   └── prosthetics/        # Prosthetic device models
-│   └── utils/                  # Utility functions
-├── examples/                   # Example scripts and tutorials
-│   ├── tracking/               # Motion tracking examples
-│   ├── gait_analysis/          # Gait analysis examples
-│   ├── muscle_optimization/    # Muscle force optimization examples
-│   └── assistive_devices/      # Assistive device examples
-│       ├── exoskeleton_optimization.py  # Exoskeleton optimization example
-├── docs/                       # Documentation
-│   └── images/                 # Documentation images
-├── tests/                      # Unit and integration tests
-└── data/                       # Sample data and models
-    ├── models/                 # OpenSim models
-    └── raw/                    # Raw experimental data
-```
-
-## 📋 Prerequisites
-
-- OpenSim 4.4 or later
-- OpenSim Moco 1.0.0 or later
-- Python 3.8+
-- NumPy (>= 1.21.0)
-- SciPy (>= 1.7.0)
-- Matplotlib (>= 3.4.0)
-- Pandas (>= 1.3.0)
-- PyTorch (for machine learning components)
-
-## 🔧 Installation
-
-1. Clone this repository:
-```bash
-git clone https://github.com/AliNikoo73/Biomechanical-Analysis-Framework.git
-cd Biomechanical-Analysis-Framework
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Install OpenSim and Moco following the [official installation guide](https://opensim.stanford.edu/install/).
-
-## 💻 Usage
-
-### Basic Simulation
-
-For a basic simulation, run:
+For Mac with Arm64 processors (M1/M2):
 
 ```bash
-python examples/gait_analysis/gait_simulation.py
+conda create -n opensim python=3.9
+conda activate opensim
+conda install -c opensim-org opensim=4.5.2
 ```
 
-### Exoskeleton Optimization
+For other platforms, see the [OpenSim documentation](https://simtk-confluence.stanford.edu/display/OpenSim/Installing+OpenSim).
 
-To run the exoskeleton optimization example using our novel ADOHRL algorithm:
+### Installing BAF
 
 ```bash
-python examples/assistive_devices/exoskeleton_optimization.py
+git clone https://github.com/yourusername/biomechanical-analysis-framework.git
+cd biomechanical-analysis-framework
+pip install -e .
 ```
 
-### Data Visualization
+## Usage
 
-To generate visualization plots of gait analysis:
+### Basic Usage
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from baf.utils.data_processing import normalize_gait_cycle, detect_gait_events
+from baf.visualization import JointPlotter, GRFPlotter, EMGPlotter, ComparativePlotter
+
+# Load data
+data = pd.read_csv('your_gait_data.csv')
+
+# Detect gait events
+events = detect_gait_events(data)
+
+# Normalize to gait cycle
+normalized_data = normalize_gait_cycle(data, events)
+
+# Create visualizations
+joint_plotter = JointPlotter()
+fig, ax = joint_plotter.plot_joint_angles(
+    normalized_data,
+    joint_cols={"hip": "hip_angle", "knee": "knee_angle", "ankle": "ankle_angle"},
+    gait_events={"toe_off": 60}
+)
+plt.show()
+```
+
+### Dynamics Analysis
+
+```python
+from baf.analysis.dynamics import calculate_joint_moments, calculate_joint_powers
+
+# Define anthropometric data
+anthropometry = {
+    'mass': 70.0,  # kg
+    'height': 1.75,  # m
+}
+
+# Calculate joint kinetics
+moments = calculate_joint_moments(kinematics, grf, anthropometry)
+powers = calculate_joint_powers(kinematics, moments)
+
+# Visualize results
+plotter = ComparativePlotter()
+fig, axes = plotter.plot_condition_comparison(
+    {'Ankle': normalized_data, 'Knee': normalized_data, 'Hip': normalized_data},
+    plot_type='joint_angle',
+    column={
+        'Ankle': 'ankle_moment',
+        'Knee': 'knee_moment',
+        'Hip': 'hip_moment'
+    },
+    gait_events={"toe_off": 60},
+    title="Joint Moments During Gait Cycle"
+)
+```
+
+### GUI Application
+
+Launch the GUI application:
 
 ```bash
-python generate_plots.py
+python -m baf.gui
 ```
 
-## 🌟 Key Innovations
+Or use the provided entry point:
 
-### Adaptive Dual-Objective Hybrid Reinforcement Learning (ADOHRL)
+```bash
+baf-gui
+```
 
-Our framework introduces a novel optimization algorithm for assistive device control:
+## Examples
 
-- **Dual-Objective Optimization:** Simultaneously optimizes for user comfort and energy efficiency
-- **Adaptive User Preference Learning:** Learns and adapts to individual user preferences over time
-- **Biomechanical Constraint Integration:** Incorporates physiological constraints into the optimization
-- **Hybrid Reward Formulation:** Combines immediate physical rewards with long-term adaptation benefits
+The `examples` directory contains example scripts demonstrating various features of the framework:
 
-For more details, see [ADOHRL Documentation](docs/algorithms/adaptive_dual_objective_rl.md).
+- `walking_simulation.py`: Generate and visualize walking data
+- `dynamics_analysis_example.py`: Calculate and visualize joint kinetics
+- More examples coming soon...
 
-## 📚 Documentation
+## Documentation
 
-- [Installation Guide](docs/installation.md)
-- [Tutorials](docs/tutorials/)
-- [API Reference](docs/api/)
-- [Algorithm Documentation](docs/algorithms/)
+Comprehensive documentation is available in the `docs` directory.
 
-## 🎯 Examples
+## Contributing
 
-1. [Basic Moco Example](examples/basic_moco_example/): Introduction to trajectory optimization
-2. [Gait Analysis](examples/gait_analysis/): Analysis of human walking
-3. [Muscle Optimization](examples/muscle_optimization/): Optimizing muscle forces
-4. [Exoskeleton Optimization](examples/assistive_devices/exoskeleton_optimization.py): Optimizing exoskeleton parameters
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to the project.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- OpenSim Team at Stanford University
-- Contributors to the OpenSim and Moco projects
-- Biomechanics research community
-
-## 📧 Contact
-
-For questions and support, please [open an issue](https://github.com/AliNikoo73/Biomechanical-Analysis-Framework/issues) or contact the maintainers. 
+- OpenSim team for their musculoskeletal modeling software
+- Contributors to the biomechanics research community 
